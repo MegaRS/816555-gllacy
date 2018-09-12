@@ -10,15 +10,74 @@
             <a class="main-header-logo" href="index.html">
               <img src="img/logo.svg" width="154" height="64" alt="Логотип проекта Глейси">
             </a>
-            <div class="search">
-              <form>
+            <div class="header-search">
+	          <a class="header-search-link" href="#search">Поиск</a>
+	          <div class="search">
+		          <div class="search">
+		            <form action="https://echo.htmlacademy.ru" method="get">
+		              <input type="text" name="search" placeholder="Что ищем?" required="">
+		            </form>
+		          </div>
+		        </div>
+	        </div>
+          <form>
+          <div class="header-login">
+        <a class="header-login-link" href="#login">Вход</a>
 
-              </form>
-            </div>
+        <div class="login-field-wrapper">
+          <div class="login-field">
+            <form action="https://echo.htmlacademy.ru" method="post">
+              <input type="email" name="email" placeholder="Электронная почта" required="">
+              <input type="password" name="pass" placeholder="Пароль" required="">
+              <input type="submit" value="Войти" name="submit_button">
+              <a href="#reset-password">Забыли пароль?</a>
+              <a href="#registration">Новая регистрация</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="header-cart">
+	          <a class="header-cart-link" href="#cart">Пусто</a>
+	          <div class="cart-field-wrapper">
+		          <div class="cart-field">
+			          <table class="cart-table">
+			            <tbody><tr>
+			          	  <td><a class="item-delete" title="Удалить"></a></td>
+			          	  <td><img src="img/orange.png" width="33" height="33" alt="orange"></td>
+			          	  <td>Пломбир с апельсиновым джемом</td>
+			          	  <td>1,5 кг<span> x 200 руб.</span></td>
+			          	  <td>300 руб.</td>
+			          	</tr>
+			          	<tr>
+			          	  <td><a class="item-delete" title="Удалить"></a></td>
+			          	  <td><img src="img/strawberry.png" width="33" height="33" alt="strawberry"></td>
+			          	  <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+			          	  <td>1,5 кг<span> x 300 руб.</span></td>
+			          	  <td>450 руб.</td>
+			          	</tr>
+			          </tbody></table>
+		            <div class="cart-field-price-wrapper">
+		              <p class="cart-field-price">Итого: 750 руб.</p>
+		            </div>
+		            <a class="cart-field-button button" href="#make_order">Оформить заказ</a>
+		          </div>
+	          </div>
+	        </div>
             <ul class="main-navigation">
-              <li><a href="catalog">Каталог</a></li>
-              <li><a href="delivery-pay">Доставка и оплата</a></li>
-              <li><a href="Company">О Компании</a></li>
+              <li><a href="#shop">Каталог</a>
+			        <div class="header-sub-menu-wrapper">
+				        <ul class="header-sub-menu">
+				          <li><a class="header-sub-menu-new" href="#link">Новинки</a></li>
+				          <li><a class="header-sub-menu-link" href="catalog.html">Сливочное</a></li>
+				          <li><a href="#link">Щербеты</a></li>
+				          <li><a href="#link">Фруктовый лед</a></li>
+				          <li><a href="#link">Мелорин</a></li>
+				        </ul>
+			        </div>
+			      </li>
+              <li><a href="#price">Доставка и оплата</a></li>
+              <li><a href="#info">О Компании</a></li>
             </ul>
             <ul class="user-navigation">
               <li class="login-link"><a href="login-in">Вход</a></li>
@@ -32,10 +91,32 @@
           </nav>
         </header>
         <main class="container">
+          <div class="slider">
+	        <div class="slider-controls">
+	          <label for="btn-1"></label>
+	          <label for="btn-2"></label>
+	          <label for="btn-3"></label>
+	        </div>
+
+	        <div class="slide" id="slide-1">
+	          <div class="slider-title">Крем-брюле и пломбир с малиновым джемом</div>
+	          <a class="slider-button button" href="#1">Давайте оба!</a>
+	        </div>
+
+	        <div class="slide" id="slide-2">
+	          <div class="slider-title">Шоколадный пломбир и лимонный сорбет</div>
+	          <a class="slider-button button" href="#1">Давайте оба!</a>
+	        </div>
+
+	        <div class="slide" id="slide-3">
+	          <div class="slider-title">Пломбир с помадкой и&nbsp;клубничный щербет</div>
+	          <a class="slider-button button" href="#1">Давайте оба!</a>
+	        </div>
+	      </div>
       <section class="raspberry-chocolate">
         <h1 class="top-free">Малинка даром!</h1>
         <h2 class="free-malina-chocolate">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно</h2>
-        <a class="button" href="#">Хочу варенье!</a>
+        <a class="button" href="#link">Хочу варенье!</a>
       </section>
       <section class="raspberry_chocolate">
         <h1 class="top-free">Шоколадки даром</h1>
@@ -43,34 +124,46 @@
         <a class="button" href="#">Хочу шоколадки!</a>
       </section>
       <section class="hit">
-        <a class="hit-one" href="#">
-          <img src="#" width="#" height="#" alt="#">
-          <p class="ice-cream-filling">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
-          <div>
-            310<span class="weight">/кг</span>
-          </div>
-        </a>
-        <a class="hit-two" href="#">
-          <img src="#" width="#" height="#" alt="#">
-          <p class="ice-cream-filling">Сливочно-кофейное с кусочками шоколада</p>
-          <div>
-            380<span class="weight">/кг</span>
-          </div>
-        </a>
-        <a class="hit-three" href="#">
-          <img src="#" width="#" height="#" alt="#">
-          <p class="ice-cream-filling">Сливочно-клубничное с присипкой из белого шоколада</p>
-          <div>
-            355<span class="weight">/кг</span>
-          </div>
-        </a>
-        <a class="hit-four" href="#">
-          <img src="#" width="#" height="#" alt="#">
-          <p class="ice-cream-filling">Сливочное крем-брюле с карамельной подливкой</p>
-          <div>
-            415<span class="weight">/кг</span>
-          </div>
-        </a>
+        <ul>
+        <li>
+	          <div class="hit-one">
+	            <img class="products-photo" src="img/orange.png" width="267" height="267" alt="orange">
+
+	            <p class="products-price">
+	              <span>310<img src="img/rub_icon.svg" width="32" height="37" alt="rub"></span>/кг
+	            </p>
+	          </div>
+
+	          <a class="products-title" href="#link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+	        </li>
+          <li>
+	          <div class="hit-two">
+	            <img class="products-photo" src="img/coffee.png" width="267" height="267" alt="coffee">
+
+	            <p class="products-price"><span>380<img src="img/rub_icon.svg" width="32" height="37" alt="rub"></span>/кг</p>
+	          </div>
+
+	          <a class="products-title" href="#link">Сливочно-кофейное с кусочками шоколада</a>
+	        </li>
+          <li>
+  	          <div class="hit-three">
+  	            <img class="products-photo" src="img/strawberry.png" width="267" height="267" alt="strawberry">
+
+  	            <p class="products-price"><span>355<img src="img/rub_icon.svg" width="32" height="37" alt="rub"></span>/кг</p>
+  	          </div>
+
+  	          <a class="products-title" href="#link">Сливочно-клубничное с присыпкой из белого шоколада</a>
+  	        </li>
+            <li>
+    	          <div class="hit-four">
+    	            <img class="products-photo" src="img/caramel.png" width="267" height="267" alt="caramel">
+
+    	            <p class="products-price"><span>415<img src="img/rub_icon.svg" width="32" height="37" alt="rub"></span>/кг</p>
+    	          </div>
+
+    	          <a class="products-title" href="#link">Сливочное крем-брюле с карамельной подливкой</a>
+    	        </li>
+            </ul>
       </section>
       <section class="advantage">
         <img src="#" weight="#" height="#" alt="fon">
@@ -86,46 +179,65 @@
       </section>
       <article class="life-hack">
         <img src="#" wedth="#" height="#" alt="#">
-        <p class="new_blog">Новое в нашем блоге</p>
-        <a class="link-new-blog">10 способов сервировки фруктовых щербетов к столу</a>
+        <p class="new-blog">Новое в нашем блоге</p>
+        <a class="link-new-blog" href="#news">10 способов сервировки фруктовых щербетов к столу</a>
       </article>
       <section class="subscribe">
-        <p class="spam-text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкустного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-        <img src="#" wedth="#" height="#" alt="#">
-        <img src="#" wedth="#" height="#" alt="#">
-        <!--Форма с эл. почтой-->
+        <div class="subscribe-wrapper">
+	          <div class="subscribe">
+	            <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
+	            <div class="subscribe-form">
+	              <form action="https://echo.htmlacademy.ru" method="post">
+	                <input type="email" id="email" placeholder="Электронная почта" required="">
+	                <input type="submit" value="Отправить" name="subscribe">
+	              </form>
+	            </div>
+	          </div>
+	        </div>
       </section>
       <section>
-        <img src="#" wedth="#" height="#" alt="#">
-        <p class="adres-contacts">
-        Адрес главного офиса<br> и офлайн-магазина:<br><span class="street">ул. Большая Конюшенная<br>19/8,г. Санкт-Петербург</span><br>
-        Для заказов по телефону:<br>
-        <span class="number">8 812 450-25-25</span><br>
-        (с 10 до 20 ежедневно)
-        <!--Кнопка-->
-      </p>
+        <div class="contacts-map" id="ya-map"><ymaps class="ymaps-2-1-68-map" style="width: 1038px; height: 428px;"><ymaps class="ymaps-2-1-68-map ymaps-2-1-68-i-ua_js_yes ymaps-2-1-68-map-bg ymaps-2-1-68-islets_map-lang-ru" style="width: 1038px; height: 428px; z-index: 0;"><ymaps class="ymaps-2-1-68-inner-panes"><ymaps class="ymaps-2-1-68-events-pane ymaps-2-1-68-user-selection-none" unselectable="on" style="height: 100%; width: 100%; top: 0px; left: 0px; position: absolute; z-index: 2500; cursor: url(&quot;https://api-maps.yandex.ru/2.1.68/build/release/images/cursor/grab.cur&quot;) 16 16, url(&quot;https://api-maps.yandex.ru/2.1.68/build/release/images/cursor/grab.cur&quot;), move;"></ymaps><ymaps class="ymaps-2-1-68-ground-pane" style="top: 0px; left: 0px; position: absolute; transition-duration: 0ms; transform: translate3d(0px, 0px, 0px) scale(1, 1); z-index: 501;"><ymaps style="z-index: 150; position: absolute;"><ymaps style="position: absolute; left: 0px; top: 0px;"><ymaps unselectable="on" class="ymaps-2-1-68-user-selection-none" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=18.09.10-0&amp;x=38287&amp;y=19113&amp;z=16&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: -69px; top: -101px;"></ymaps><ymaps unselectable="on" class="ymaps-2-1-68-user-selection-none" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec01.maps.yandex.net/tiles?l=map&amp;v=18.09.10-0&amp;x=38288&amp;y=19114&amp;z=16&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 187px; top: 155px;"></ymaps><ymaps unselectable="on" class="ymaps-2-1-68-user-selection-none" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=18.09.10-0&amp;x=38289&amp;y=19114&amp;z=16&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 443px; top: 155px;"></ymaps><ymaps unselectable="on" class="ymaps-2-1-68-user-selection-none" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=18.09.10-0&amp;x=38287&amp;y=19115&amp;z=16&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: -69px; top: 411px;"></ymaps><ymaps unselectable="on" class="ymaps-2-1-68-user-selection-none" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec01.maps.yandex.net/tiles?l=map&amp;v=18.09.10-0&amp;x=38290&amp;y=19114&amp;z=16&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 699px; top: 155px;"></ymaps><ymaps unselectable="on" class="ymaps-2-1-68-user-selection-none" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=18.09.10-0&amp;x=38287&amp;y=19114&amp;z=16&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: -69px; top: 155px;"></ymaps><ymaps unselectable="on" class="ymaps-2-1-68-user-selection-none" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec02.maps.yandex.net/tiles?l=map&amp;v=18.09.10-0&amp;x=38288&amp;y=19113&amp;z=16&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 187px; top: -101px;"></ymaps><ymaps unselectable="on" class="ymaps-2-1-68-user-selection-none" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=18.09.10-0&amp;x=38289&amp;y=19113&amp;z=16&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 443px; top: -101px;"></ymaps><ymaps unselectable="on" class="ymaps-2-1-68-user-selection-none" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec02.maps.yandex.net/tiles?l=map&amp;v=18.09.10-0&amp;x=38288&amp;y=19115&amp;z=16&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 187px; top: 411px;"></ymaps><ymaps unselectable="on" class="ymaps-2-1-68-user-selection-none" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=18.09.10-0&amp;x=38289&amp;y=19115&amp;z=16&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 443px; top: 411px;"></ymaps><ymaps unselectable="on" class="ymaps-2-1-68-user-selection-none" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec02.maps.yandex.net/tiles?l=map&amp;v=18.09.10-0&amp;x=38290&amp;y=19113&amp;z=16&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 699px; top: -101px;"></ymaps><ymaps unselectable="on" class="ymaps-2-1-68-user-selection-none" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=18.09.10-0&amp;x=38291&amp;y=19113&amp;z=16&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 955px; top: -101px;"></ymaps><ymaps unselectable="on" class="ymaps-2-1-68-user-selection-none" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=18.09.10-0&amp;x=38291&amp;y=19115&amp;z=16&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 955px; top: 411px;"></ymaps><ymaps unselectable="on" class="ymaps-2-1-68-user-selection-none" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=18.09.10-0&amp;x=38291&amp;y=19114&amp;z=16&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 955px; top: 155px;"></ymaps><ymaps unselectable="on" class="ymaps-2-1-68-user-selection-none" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec02.maps.yandex.net/tiles?l=map&amp;v=18.09.10-0&amp;x=38286&amp;y=19113&amp;z=16&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: -325px; top: -101px;"></ymaps><ymaps unselectable="on" class="ymaps-2-1-68-user-selection-none" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec01.maps.yandex.net/tiles?l=map&amp;v=18.09.10-0&amp;x=38286&amp;y=19114&amp;z=16&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: -325px; top: 155px;"></ymaps><ymaps unselectable="on" class="ymaps-2-1-68-user-selection-none" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec02.maps.yandex.net/tiles?l=map&amp;v=18.09.10-0&amp;x=38286&amp;y=19115&amp;z=16&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: -325px; top: 411px;"></ymaps><ymaps unselectable="on" class="ymaps-2-1-68-user-selection-none" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec02.maps.yandex.net/tiles?l=map&amp;v=18.09.10-0&amp;x=38290&amp;y=19115&amp;z=16&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 699px; top: 411px;"></ymaps><ymaps unselectable="on" class="ymaps-2-1-68-user-selection-none" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec01.maps.yandex.net/tiles?l=map&amp;v=18.09.10-0&amp;x=38286&amp;y=19112&amp;z=16&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: -325px; top: -357px; transition-duration: 250ms; transition-property: opacity;"></ymaps><ymaps unselectable="on" class="ymaps-2-1-68-user-selection-none" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=18.09.10-0&amp;x=38287&amp;y=19112&amp;z=16&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: -69px; top: -357px;"></ymaps><ymaps unselectable="on" class="ymaps-2-1-68-user-selection-none" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec01.maps.yandex.net/tiles?l=map&amp;v=18.09.10-0&amp;x=38288&amp;y=19112&amp;z=16&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 187px; top: -357px;"></ymaps><ymaps unselectable="on" class="ymaps-2-1-68-user-selection-none" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=18.09.10-0&amp;x=38289&amp;y=19112&amp;z=16&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 443px; top: -357px;"></ymaps><ymaps unselectable="on" class="ymaps-2-1-68-user-selection-none" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec01.maps.yandex.net/tiles?l=map&amp;v=18.09.10-0&amp;x=38290&amp;y=19112&amp;z=16&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 699px; top: -357px;"></ymaps><ymaps unselectable="on" class="ymaps-2-1-68-user-selection-none" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=18.09.10-0&amp;x=38291&amp;y=19112&amp;z=16&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 955px; top: -357px;"></ymaps></ymaps></ymaps></ymaps><ymaps class="ymaps-2-1-68-copyrights-pane" style="height: 0px; bottom: 0px; right: 0px; top: auto; left: 0px; position: absolute; z-index: 5002;"><ymaps><ymaps class="ymaps-2-1-68-copyright" style=""><ymaps class="ymaps-2-1-68-copyright__fog">…</ymaps><ymaps class="ymaps-2-1-68-copyright__wrap"><ymaps class="ymaps-2-1-68-copyright__layout"><ymaps class="ymaps-2-1-68-copyright__content-cell"><ymaps class="ymaps-2-1-68-copyright__content"><ymaps class="ymaps-2-1-68-copyright__text">© Яндекс</ymaps><ymaps class="ymaps-2-1-68-copyright__agreement">&nbsp;<a class="ymaps-2-1-68-copyright__link" target="_blank" href="https://yandex.ru/legal/maps_termsofuse/?lang=ru">Условия использования</a></ymaps></ymaps></ymaps><ymaps class="ymaps-2-1-68-copyright__logo-cell"><a class="ymaps-2-1-68-copyright__logo" href="" target="_blank"></a></ymaps></ymaps></ymaps></ymaps></ymaps></ymaps><ymaps class="ymaps-2-1-68-controls-pane" style="width: 100%; top: 0px; left: 0px; position: absolute; z-index: 4503;"><ymaps class="ymaps-2-1-68-controls__toolbar" style="margin-top: 10px;"><ymaps class="ymaps-2-1-68-controls__toolbar_left"></ymaps><ymaps class="ymaps-2-1-68-controls__toolbar_right"></ymaps></ymaps><ymaps class="ymaps-2-1-68-controls__bottom" style="top: 428px;"></ymaps></ymaps><ymaps class="ymaps-2-1-68-places-pane" style="top: 0px; left: 0px; position: absolute; transition-duration: 0ms; transform: translate3d(0px, 0px, 0px) scale(1, 1); z-index: 2004;"><ymaps class="ymaps-2-1-68-placemark-overlay ymaps-2-1-68-user-selection-none" unselectable="on" style="z-index: 650; height: 0px; width: 0px; position: absolute; left: 224px; top: 276px;"><ymaps><ymaps class="ymaps-2-1-68-image " style="position: absolute; left: -39px; top: -139px; width: 218px; height: 142px; opacity: 1; background-position: 0px 0px; background-size: 218px 142px; background-image: url(&quot;http://www.banana-web.ru/projects/gllacy/img/map_pin.png&quot;);"></ymaps></ymaps></ymaps></ymaps></ymaps></ymaps></ymaps></div>
+        <div class="contacts-info">
+  	        <p>Адрес главного офиса и<br> офлайн магазина:</p>
+  	        <p><b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
+  	        <p>Для заказов по телефону:</p>
+  	        <a class="contacts-phone" href="tel:+78124502525">8 812 450-25-25</a>
+  	        <p>(с 10 до 20 ежедневно)</p>
+  	        <a class="contacts-info-button button" href="feedback_form.html" target="_blank">Форма обратной связи</a>
+  	        <div class="feedback-form-overlay"></div>
+  	        <div class="feedback-form">
+  	          <form action="https://echo.htmlacademy.ru" method="post">
+  	            <button class="feedback-form-close" type="button" title="Закрыть"></button>
+  	            <p>Мы обязательно вам ответим!</p>
+  	            <input type="text" name="username" placeholder="Как вас зовут?">
+  	            <input type="email" name="email" placeholder="Ваша почта для ответа?">
+  	            <textarea name="comment" placeholder="Напишите что-нибудь..."></textarea>
+  	            <input type="submit" value="Отправить" name="send_form">
+  	          </form>
+  	        </div>
+  	      </div>
       </section>
     </main>
     <footer class="main-footer">
     <div class="footer-social">
       <ul>
-          <li><a class="social-button social-btn-tw" href="#">Твиттер</a></li>
-          <li><a class="social-button social-btn-inst" href="#">Инстаграм</a></li>
-          <li><a class="social-button  social-btn-fb" href="#">Фейсбук</a></li>
-          <li><a class="social-button social-btn-vk" href="#">ВКонтакте</a></li>
+          <li><a class="social-button social-btn-tw" href="#twitter">Твиттер</a></li>
+          <li><a class="social-button social-btn-inst" href="#instagram">Инстаграм</a></li>
+          <li><a class="social-button  social-btn-fb" href="#facebook">Фейсбук</a></li>
+          <li><a class="social-button social-btn-vk" href="#VK">ВКонтакте</a></li>
         </ul>
     </div>
     <div class="footer-menu">
       <img src="#" width="#" height="#" alt="#">
       <ul>
-        <li><a class="bottom-menu" href="#">Для поставщиков</a></li>
-        <li><a class="bottom-menu" href="#">О производстве</a></li>
-        <li><a class="bottom-menu" href="#">Наши документы</a></li>
-        <li><a class="bottom-menu" href="#">Экологические стандарты</a></li>
+        <li><a class="bottom-menu" href="#link">Для поставщиков</a></li>
+        <li><a class="bottom-menu" href="#link">О производстве</a></li>
+        <li><a class="bottom-menu" href="#link">Наши документы</a></li>
+        <li><a class="bottom-menu" href="#link">Экологические стандарты</a></li>
       </ul>
     </div>
     <p class="footer-copyright">
-      <img src="#" widht="#" height="#" alt="#">
+      <img src="img/developer_logo.svg" width="108" height="37" alt="dev_logo">
         <b>Сделано в</b>
         <a class="button" href="https://htmlacademy.ru">HTML Academy</a>© 2017
     </p>
